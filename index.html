@@ -26,7 +26,7 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Team Profile</a></li>
+								<li><a href="#Teamprofile">Team Profile</a></li>
 								<li><a href="#work">Ideal Jobs</a></li>
 								<li><a href="#about">Industry Data</a></li>
 								<li><a href="#contact">IT Work</a></li>
@@ -40,13 +40,176 @@
 
 				<!-- Main -->
 					<div id="main">
-
 						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+							<article id="Teamprofile">
+								<style>
+									* {box-sizing: border-box}
+									body {font-family: Verdana, sans-serif; margin:0}
+									.mySlides {display: none}
+									img {vertical-align: middle;}
+									
+									/* Slideshow container */
+									.slideshow-container {
+									  max-width: 1000px;
+									  position: relative;
+									  margin: auto;
+									}
+									
+									/* Next & previous buttons */
+									.prev, .next {
+									  cursor: pointer;
+									  position: absolute;
+									  top: 50%;
+									  width: auto;
+									  padding: 16px;
+									  margin-top: -22px;
+									  color: white;
+									  font-weight: bold;
+									  font-size: 18px;
+									  transition: 0.6s ease;
+									  border-radius: 0 3px 3px 0;
+									  user-select: none;
+									}
+									
+									/* Position the "next button" to the right */
+									.next {
+									  right: 0;
+									  border-radius: 3px 0 0 3px;
+									}
+									
+									/* On hover, add a black background color with a little bit see-through */
+									.prev:hover, .next:hover {
+									  background-color: rgba(0,0,0,0.8);
+									}
+									
+									/* Caption text */
+									.text {
+									  color: #f2f2f2;
+									  font-size: 15px;
+									  padding: 8px 12px;
+									  position: absolute;
+									  bottom: 8px;
+									  width: 100%;
+									  text-align: center;
+									}
+									
+									/* Number text (1/3 etc) */
+									.numbertext {
+									  color: #f2f2f2;
+									  font-size: 12px;
+									  padding: 8px 12px;
+									  position: absolute;
+									  top: 0;
+									}
+									
+									/* The dots/bullets/indicators */
+									.dot {
+									  cursor: pointer;
+									  height: 15px;
+									  width: 15px;
+									  margin: 0 2px;
+									  background-color: #bbb;
+									  border-radius: 50%;
+									  display: inline-block;
+									  transition: background-color 0.6s ease;
+									}
+									
+									.active, .dot:hover {
+									  background-color: #717171;
+									}
+									
+									/* Fading animation */
+									.fade {
+									  -webkit-animation-name: fade;
+									  -webkit-animation-duration: 1.5s;
+									  animation-name: fade;
+									  animation-duration: 1.5s;
+									}
+									
+									@-webkit-keyframes fade {
+									  from {opacity: .4} 
+									  to {opacity: 1}
+									}
+									
+									@keyframes fade {
+									  from {opacity: .4} 
+									  to {opacity: 1}
+									}
+									
+									/* On smaller screens, decrease text size */
+									@media only screen and (max-width: 300px) {
+									  .prev, .next,.text {font-size: 11px}
+									}
+									</style>
+									</head>
+									<body>
+									
+									<div class="slideshow-container">
+									
+									<div class="mySlides fade">
+									  <div class="numbertext"></div>
+									  <img src="images\pic04.jpg" style="width:100%">
+									</div>
+									
+									<div class="mySlides fade">
+									  <div class="numbertext"></div>
+									  <img src="images\pic05.jpg" style="width:100%">
+									</div>
+									
+									<div class="mySlides fade">
+									  <div class="numbertext"></div>
+									  <img src="images\pic06.jpg" style="width:100%">
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext"></div>
+										<img src="images\pic07.jpg" style="width:100%">
+									  </div>
+									  
+									<div class="mySlides fade">
+										<div class="numbertext"></div>
+										<img src="images\pic08.jpg" style="width:100%">
+									</div>
+									
+									<div class="mySlides fade">
+										<div class="numbertext"></div>
+										<img src="images\pic09.jpg" style="width:100%">
+									</div>
+									<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+									<a class="next" onclick="plusSlides(1)">&#10095;</a>
+									
+									</div>
+									<br>
+									
+									<script>
+									var slideIndex = 1;
+									showSlides(slideIndex);
+									
+									function plusSlides(n) {
+									  showSlides(slideIndex += n);
+									}
+									
+									function currentSlide(n) {
+									  showSlides(slideIndex = n);
+									}
+									
+									function showSlides(n) {
+									  var i;
+									  var slides = document.getElementsByClassName("mySlides");
+									  var dots = document.getElementsByClassName("dot");
+									  if (n > slides.length) {slideIndex = 1}    
+									  if (n < 1) {slideIndex = slides.length}
+									  for (i = 0; i < slides.length; i++) {
+										  slides[i].style.display = "none";  
+									  }
+									  for (i = 0; i < dots.length; i++) {
+										  dots[i].className = dots[i].className.replace(" active", "");
+									  }
+									  slides[slideIndex-1].style.display = "block";  
+									  dots[slideIndex-1].className += " active";
+									}
+									</script>
+									
 							</article>
 
 						<!-- Work -->
@@ -62,6 +225,14 @@
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+							</article>
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>		
 							</article>
 
 						<!-- Contact -->
@@ -93,6 +264,9 @@
 									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
+
+
+					
 							</article>
 
 						<!-- Elements -->
